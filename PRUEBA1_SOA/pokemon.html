@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title></title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+		integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+
+</head>
+
+<body>
+	<div>
+		<!--ENCABEZADO-->
+		<div class="row justify-content-md-center">
+			<div class="col-md-auto">
+				<h1 class="titulos">PRUEBA 1 - SOA</h1>
+				<h1 class="titulos">BATALLA DE POKEMON</h1>
+			</div>
+		</div>
+		<br><br><br><br>
+		<!--CREAMOS UNA LISTA PARA POKEMONS 1 2 VS 3 4 -->
+		<div class="lista-pokemon" id="listarpokemon">
+
+			<div class="pokemon" id="pokemon_1">
+
+				<div>
+					<div class="nombre_pokemon">---POKEMON 1---</div>
+					<img>
+					<p></p>
+				</div>
+				<div id="pokemon_2">
+					<div class="nombre_pokemon">---POKEMON 2---</div>
+					<img>
+					<p></p>
+				</div>
+
+			</div>
+
+
+			<div class="vs">VS</div>
+
+			<div class="pokemon" id="pokemon_3">
+
+				<div class="nombre_pokemon">---POKEMON 1---</div>
+				<img>
+				<p></p>
+
+				<div id="pokemon_4">
+					<div class="nombre_pokemon">---POKEMON 2---</div>
+					<img>
+					<p></p>
+				</div>
+
+			</div>
+
+
+		</div>
+		<!--CREAMOS EL SCRIPT PARA EL CONSUMO DE LA API POKEMON
+		CREAMOS UNA FUNCION PARA CADA POKEMOS SEA RANDOMICO Y SE MUESTRE AL LLAMAR 
+	consultarPokemon-->
+		<script>
+
+			let lista = document.getElementById("listarpokemon");
+
+			function consultarPokemon(id, number) {
+				fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
+
+					.then(res => {
+						console.log(res);
+						res.json()
+
+							.then(pokemon => {
+								mostrarPokemon(pokemon, number)
+							})
+					})
+			}
+			
+		
+			function consultarPokemones() {
+
+				let Pokemon_1 = Math.round(Math.random() * 150);
+
+				let Pokemon_2 = Math.round(Math.random() * 150);
+
+				let Pokemon_3 = Math.round(Math.random() * 150);
+
+				let Pokemon_4 = Math.round(Math.random() * 150);
+
+				consultarPokemon(Pokemon_1, 1);
+
+				consultarPokemon(Pokemon_2, 2);
+
+				consultarPokemon(Pokemon_3, 3);
+
+				consultarPokemon(Pokemon_4, 4);
+			}
+
+			function mostrarPokemon(pokemon, id) {
+
+				let item = lista.querySelector(`#pokemon_${id}`);
+
+				let img = item.getElementsByTagName("img")[0];
+
+				img.setAttribute("src", pokemon.sprites.front_default);
+
+				let nombre = item.getElementsByTagName("p")[0];
+
+				nombre.textContent = pokemon.name;
+
+			}
+
+			consultarPokemones();
+		</script>
+		<!--AGREGAMOS UN BOTON CON ONCLICK PARA QUE AL 
+			MOMENTO DE DAR CLICK SE CAMBIE LOS POKEMONS ALEATORIAMENTE-->
+		<br><br><br><br>
+		<div class="row">
+			<div class="col-sm">
+
+			</div>
+			<div class="col-md-auto">
+				<button type="button" class="btn btn-success" onclick="consultarPokemones()">COMENZAR</button>
+			</div>
+			<div class="col-sm">
+
+			</div>
+		</div>
+		<ul>INTEGRANTES:</ul>
+		<ul>* AMOGUIMBA CAIZA JESSICA NATHALY</ul>
+		<ul>* QUISHPE ZAPATA ANDREA LIZETH</ul>
+
+	</div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+body {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 10px;
+    margin: 0;
+}
+
+.titulos {
+    text-align: center;
+    padding: 10px;
+    color: rgb(34, 27, 27);
+}
+.lista-pokemon {
+    display: grid;
+    grid-template-columns: 1fr 100px 1fr;
+    max-width: 800px;
+    margin: auto;
+}
+.pokemon {
+    border: 1px solid black;
+    padding: 10px;
+    background: rgb(214, 159, 236);
+    text-align: center;
+}
+.nombre_pokemon{
+    font-size: 15px;
+    font-weight: bold;
+}
+.vs {
+    text-align: center;
+    margin: auto;
+    font-size: 30px;
+}
+
+.img{
+    width: 100%;
+}
+.row{
+    background-color: rgb(206, 58, 95);
+}
+
+
