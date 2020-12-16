@@ -5,6 +5,7 @@ body {
 }
 
 .titulos {
+    font-family: cursive;
     text-align: center;
     padding: 10px;
     color: rgb(34, 27, 27);
@@ -34,8 +35,13 @@ body {
 .img{
     width: 100%;
 }
-.row{
+.row1{
     background-color: rgb(206, 58, 95);
 }
 
-
+.boton{
+    background-color: violet;
+}
+.card{
+    padding: 15px;
+}
