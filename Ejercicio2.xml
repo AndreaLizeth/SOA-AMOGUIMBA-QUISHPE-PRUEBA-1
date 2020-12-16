@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Cine id="0138929" name="Multicines" ciudad="Quito" direccion="El Recreo">
+<cartelera mes="Diciembre"> 
+
+<pelicula id="000001">
+	<codigo>PD0124356</codigo>
+
+	<titulo>Mujer Maravilla 1984</titulo>
+
+	<año>2020</año>
+
+	<duracion>
+		<horas>2</horas>
+		<minutos>30</minutos>
+		<segundos>0</segundos>
+	</duracion>
+
+	<nacionalidad>Estadounidense</nacionalidad>
+
+	<genero>Accion</genero>
+
+	<clasificacion> Todo Publico </clasificacion>
+
+	<director>
+		<nombre>Patty</nombre>
+		<apellido>Jenkins</apellido>
+		<fechaNacimiento>
+			<año>1971</año>
+			<mes>julio</mes>
+			<dia>23</dia>
+		</fechaNacimiento>
+	</director>
+
+	<reparto>
+		<actoresPrincipales>
+			<Principal id="0001">
+				<nombreOriginal>Gal Gadot </nombreOriginal>
+				<nombreEnPelicula>Diana Prince</nombreEnPelicula>
+			</Principal>
+			<Principal id="0002">
+				<nombreOriginal>Chris Pine </nombreOriginal>
+				<nombreEnPelicula>Steve Trevor</nombreEnPelicula>
+			</Principal>
+		</actoresPrincipales>
+
+		<actoresSecundarios>
+			<Secundarios id="0001">
+				<nombreOriginal>Kristen Wiig </nombreOriginal>
+				<nombreEnPelicula>Barbara Minerva</nombreEnPelicula>
+			</Secundarios>
+			<Secundarios id="0002">
+				<nombreOriginal>Pedro Pascal</nombreOriginal>
+				<nombreEnPelicula>Maxwell Lord </nombreEnPelicula>
+			</Secundarios>
+		</actoresSecundarios>
+
+
+		<dobles>
+			<dobleActor id="0001">
+				<nombreOriginal>Hayley Chambers</nombreOriginal>
+				<Sustituye>Diana Prince</Sustituye>
+			</dobleActor>
+		</dobles>
+	</reparto>
+
+	<sinopsis>
+		Diana Prince, conocida como Wonder Woman se enfrenta a Cheetah, una villana que posee fuerza y agilidad sobrehumanas.
+	</sinopsis>
+
+</pelicula>
+
+</cartelera>
+</Cine>
